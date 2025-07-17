@@ -1,0 +1,43 @@
+# Project-Specific Development Rules (Personal Stock Portfolio Tracker)
+
+## 1. Feature Development Workflow
+- Always create a new git branch for each new feature or bugfix (e.g., `feature/add-goal-tracking`).
+- Use pull requests (PRs) to review and test new features before merging to `main`, even for solo development.
+- Thoroughly test new features locally before merging. Never merge untested code to `main`.
+- Never overwrite or remove working features when adding new ones. Refactor with care and always test backward compatibility.
+- Update documentation (README, features list, etc.) with every new feature or change.
+
+## 2. Database Migration & Data Preservation
+- Use migration tools (e.g., Prisma Migrate) for all database schema changes. Never edit the database schema manually in production.
+- Before running any migration, always back up the current database.
+- Use migration scripts that preserve existing data (e.g., use `ALTER TABLE` instead of `DROP TABLE`).
+- Never drop tables or columns containing important data without a backup and a clear migration plan.
+- Test all migrations on a local/dev copy of the database before applying to production.
+- Keep seed scripts up to date, but never overwrite user data during seeding. Use conditional seeding or separate dev/prod seed scripts.
+
+## 3. General Coding & Collaboration Rules
+- Use clear, descriptive commit messages (e.g., `feat: add goal tracking UI`).
+- Follow consistent code style (TypeScript strict mode, Prettier, ESLint). Run format/lint before committing.
+- For experimental features, use feature flags or keep them in separate branches until stable.
+- Regularly back up both code and database, especially before major changes.
+- Use GitHub Issues to track bugs, feature requests, and tasks—even for solo projects.
+- Maintain a `CHANGELOG.md` to record all significant changes, features, and fixes.
+
+## 4. Documentation Organization
+- All documentation files must be placed in the `documentation/` folder.
+- Keep the root directory clean by organizing all docs, guides, and specifications in the documentation folder.
+- Update documentation paths in README and other references when moving files.
+
+## 5. Data Safety & Recovery
+- Always back up the database before migrations or major updates.
+- Document recovery steps in case of accidental data loss (e.g., how to restore from backup).
+- Never use destructive commands (`DROP TABLE`, `DELETE FROM ...`) in production without a backup and explicit confirmation.
+
+## 6. Deployment & Production
+- Never commit sensitive data (API keys, DB passwords) to git. Use `.env.local` or environment variables.
+- Apply migrations to production only after successful local/dev testing and backup.
+- Regularly monitor app and database health. Set up alerts for errors or downtime if possible.
+
+---
+
+# (Other existing .cursorrules content follows here) 

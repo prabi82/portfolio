@@ -1,91 +1,36 @@
-# Stock Portfolio Tracker (Personal Edition) 📈
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-**Your Private, Personal Investment Dashboard**
+## Getting Started
 
-A simple, privacy-focused web app for tracking your Indian and international stock investments, reviewing returns, estimating future value, and correlating with your personal financial goals.
+First, run the development server:
 
----
-
-## ✨ Features
-- **Portfolio Dashboard**: Overview of value, returns, and holdings
-- **Manual Entry**: Add/edit/delete stocks and transactions
-- **Bulk Import**: Import from CSV/Excel
-- **Performance Analytics**: XIRR, annualized/absolute returns, historical chart
-- **Goal Tracking**: Set future goals, see progress, estimate future value
-- **Simple Insights**: Asset allocation, sector/currency breakdown, benchmark comparison
-- **Data Privacy**: All data stored locally (browser or SQLite), export/backup available
-- **Mobile Friendly**: Responsive UI for all devices
-
----
-
-## 🛠️ Technology Stack
-- **Frontend**: Next.js (React), TypeScript, Tailwind CSS
-- **State**: Local storage (browser) or SQLite/Prisma (optional)
-- **Charts**: Recharts or Chart.js
-- **No backend, authentication, or multi-user features**
-
----
-
-## 🚀 Quick Start
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/stock-portfolio-tracker.git
-   cd stock-portfolio-tracker
-   ```
-2. **Install Dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-3. **Run the App**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-4. **Open in Browser**
-   Go to [http://localhost:3000](http://localhost:3000)
-
----
-
-## 📁 Project Structure
-```
-stock-portfolio-tracker/
-├── app/                # Next.js App Router
-├── components/         # UI components
-├── lib/                # Utility libraries
-├── hooks/              # Custom React hooks
-├── stores/             # Zustand/local state
-├── types/              # TypeScript types
-├── public/             # Static assets
-└── docs/               # Documentation
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🔒 Privacy & Data
-- **All data is stored locally** in your browser (IndexedDB/localStorage) or optionally in SQLite (for desktop use)
-- **No data is sent to any server or third party**
-- **Export/backup** your data anytime as CSV/Excel
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 📝 Development Roadmap
-- [x] Manual entry for holdings and transactions
-- [x] Portfolio dashboard and analytics
-- [x] Goal setting and progress tracking
-- [x] Import/export for data backup
-- [x] Mobile-first, responsive design
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 🙏 Acknowledgments
-- **Next.js** for the framework
-- **Recharts/Chart.js** for charting
-- **Tailwind CSS** for styling
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
----
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-**Made for personal use. 100% private.** 
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
